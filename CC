@@ -1,0 +1,52 @@
+STEP 1: Create Custom Object
+Go to: Setup → Object Manager → Create → Custom Object
+Fill:
+Field	Value
+Label	Employee
+Plural Label	Employees
+Object Name	Employee
+Click:Save
+
+✅ STEP 2: Create Fields
+Inside Employee Object create:
+Field Name	Type
+Employee ID	Number
+Department	Text
+Salary	Number
+
+✅ STEP 3: Create Tab
+Go to: Setup → Tabs
+Under: Custom Object Tabs
+Click: New
+Select: Employee
+Choose any style → Next → Next → Save
+
+✅ STEP 4: Open Employee Tab
+Click: App Launcher (9 dots)
+
+Search: Employee
+Open Employee tab.
+
+✅ STEP 5: Open Developer Console
+⚙️ Gear Icon → Developer Console
+
+✅ STEP 6: Run Apex Code
+Go:Debug → Open Execute Anonymous Window
+
+Paste:
+Employee__c e = new Employee__c();
+
+e.Name = 'Rahul Sharma';
+e.Employee_ID__c = 101;
+e.Department__c = 'IT';
+e.Salary__c = 50000;
+insert e;
+System.debug('Employee Record Inserted Successfully');
+
+Click:Execute
+
+✅ STEP 7: Show Output
+Go back to:
+Employee Tab
+Refresh page.
+New employee record appears ✅
